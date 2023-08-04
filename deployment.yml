@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: complete-production-e2e-pipeline
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: complete-production-e2e-pipeline
+  template:
+    metadata:
+      labels:
+        app: complete-production-e2e-pipeline
+    spec:
+      containers:
+        - name: complete-production-e2e-pipeline
+          image: nadir24950/complete-production-e2e-pipeline:1.0.0-29
+          resources:
+            limits:
+              memory: "256Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
