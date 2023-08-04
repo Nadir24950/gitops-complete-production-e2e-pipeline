@@ -15,7 +15,7 @@ pipeline{
 
         stage("Checkout from SCM") {
             steps {
-                git branch: "master", credentialsId: "github", url: "https://githu.com/Nadir24950/jenkins-java-gitops"
+                git branch: "master", credentialsId: "github", url: "https://githu.com/Nadir24950/gitops-complete-production-e2e-pipeline"
             }
         }
 
@@ -38,7 +38,7 @@ pipeline{
                 """
 
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                    sh "git push https://github.com/Nadir24950/jenkins-java-gitops master"
+                    sh "git push https://github.com/Nadir24950/gitops-complete-production-e2e-pipeline master"
                 }
             }
         }
