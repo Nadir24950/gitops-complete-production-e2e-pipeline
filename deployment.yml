@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: complete-production-e2e-pipeline
-          image: nadir24950/complete-production-e2e-pipeline:1.0.0-29
+          image: nadir24950/complete-production-e2e-pipeline:1.0.0-40
           resources:
             limits:
               memory: "256Mi"
