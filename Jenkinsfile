@@ -34,7 +34,7 @@ pipeline{
                     git config --global user.name 'Nadir24950'
                     git config --global user.email 'nadir24950@gmail.com'
                     git add deployment.yml
-                    git commit -m "Updated the Deployment Manifest
+                    git commit -m 'Updated the Deployment Manifest'
                 """
 
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
