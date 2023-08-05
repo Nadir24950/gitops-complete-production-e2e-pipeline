@@ -15,7 +15,7 @@ pipeline{
 
         stage("Checkout from SCM") {
             steps {
-                git branch: "main", credentialsId: "github", url: "https://githu.com/Nadir24950/gitops-complete-production-e2e-pipeline"
+                git branch: "main", credentialsId: "github", url: "https://github.com/Nadir24950/gitops-complete-production-e2e-pipeline"
             }
         }
 
