@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: complete-production-e2e-pipeline
+  name: complete-production-e2e-pipeline:1.0.0-54
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: complete-production-e2e-pipeline
+      app: complete-production-e2e-pipeline:1.0.0-54
   template:
     metadata:
       labels:
-        app: complete-production-e2e-pipeline
+        app: complete-production-e2e-pipeline:1.0.0-54
     spec:
       containers:
-        - name: complete-production-e2e-pipeline
-          image: nadir24950/complete-production-e2e-pipeline:1.0.0-41
+        - name: complete-production-e2e-pipeline:1.0.0-54
+          image: nadir24950/complete-production-e2e-pipeline:1.0.0-54
           resources:
             limits:
               memory: "256Mi"
