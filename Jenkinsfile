@@ -31,14 +31,14 @@ pipeline{
         stage("Push the changed deployment file to Git") {
             steps {
                 sh """
-                    git config --global user.name "Nadir24950"
-                    git config --global user.email "nadir24950@gmail.com"
+                    git config --global user.name 'Nadir24950'
+                    git config --global user.email 'nadir24950@gmail.com'
                     git add deployment.yml
                     git commit -m "Updated the Deployment Manifest
                 """
 
                 withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
-                    sh "git push https://github.com/Nadir24950/gitops-complete-production-e2e-pipeline master"
+                    sh "git push https://github.com/Nadir24950/gitops-complete-production-e2e-pipeline main"
                 }
             }
         }
